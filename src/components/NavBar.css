@@ -1,0 +1,100 @@
+.topbar {
+    display: none;
+    background-color: black;
+    color: white;
+}
+
+.header {
+    display: none;
+    border-bottom: 1px solid whitesmoke;
+}
+  
+.header-mobile {
+    display: block;
+    padding: 10px;
+}
+
+@media screen and (min-width:768px) {
+    .topbar {
+        display: block;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .header {
+        display: block;
+        padding: 30px;
+    }
+    .header-mobile{
+        display: none;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+}
+
+.nav-item {
+    padding: 20px;
+}
+
+.nav-mobile {
+    display: block;
+}
+
+.nav-mobile-menu {
+    display: none;
+}
+
+.nav-toggle {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    padding: 15px 0;
+}
+
+.nav-toggle span,
+.nav-toggle span:before,
+.nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: black;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+}
+
+.nav-toggle span:before {
+    top: -10px;
+}
+
+.nav-toggle span:after {
+    bottom: -10px;
+}
+
+.nav-toggle.active span {
+    background-color: transparent;
+}
+
+.nav-toggle.active span:before,
+.nav-toggle.active span:after {
+    top: 0;
+}
+
+.nav-toggle.active span:before {
+    transform: rotate(45deg);
+}
+
+.nav-toggle.active span:after {
+    transform: rotate(-45deg);
+}
+
+.menu ul > li {
+    display: inline-block;
+    margin-right: 5px;
+    color: #707070;
+  }
