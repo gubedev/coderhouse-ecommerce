@@ -1,5 +1,6 @@
 import React from "react"
 import "./NavBar.css"
+import CartWidget from "./CartWidget"
 
 const NavBar = () => {
   return (
@@ -9,12 +10,12 @@ const NavBar = () => {
           <div>
             <span>Teléfono: +54 333 444 5555</span>
             &nbsp;
-            <span>email: info@coderehousecommerce.com</span>
+            <span>email: info@coderhousecommerce.com</span>
           </div>
           <div>
             <span>Teléfono: +54 333 444 5555</span>
             &nbsp;
-            <span>email: info@coderehousecommerce.com</span>
+            <span>email: info@coderhousecommerce.com</span>
           </div>
         </div>
       </div>
@@ -22,8 +23,9 @@ const NavBar = () => {
       <div className="header-mobile">
         <div className="container">
           <div>
-            <h1>Coderehouse shop</h1>
+            <h1>Coderhouse shop</h1>
           </div>
+          <CartWidget />
           <a className="nav-toggle">
             <span></span>
           </a>
@@ -50,7 +52,7 @@ const NavBar = () => {
       <div className="header">
         <div className="container">
           <div>
-            <h1>Coderehouse shop</h1>
+            <h1>Coderhouse shop</h1>
           </div>
           <div className="menu">
             <ul>
@@ -68,7 +70,12 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <div><strong>Bienvenido!</strong> usuario</div>
+          <div className="flex">
+            <CartWidget />
+            <div className="pl-1">
+              <strong>Bienvenido!</strong> usuario
+            </div>
+          </div>
         </div>
       </div>
     </>
