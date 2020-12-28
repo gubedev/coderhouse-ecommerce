@@ -1,0 +1,10 @@
+.item-count {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-count__quantity {
+    display: flex;
+    justify-content: space-between;
+}
