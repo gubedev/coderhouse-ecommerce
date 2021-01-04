@@ -2,7 +2,7 @@ import React, {
   useEffect, 
   useState 
 } from "react"
-import { fetchProducts } from "../services/fetchProducts.mock"
+import { fetchProducts } from "../services/api.mock"
 import ItemCount from "./ItemCount"
 import ItemList from "./ItemList"
 

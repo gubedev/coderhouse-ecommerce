@@ -23,3 +23,20 @@ export const fetchProducts = async () => {
   } )
 
 }
+
+export const fetchProduct = async () => {
+  const product = {
+      id: "1",
+      title: "Camisa Tiger",
+      description: "Descripcion camisa Tiger",
+      price: 100,
+      pictureUrl: ""
+  }
+  
+  return new Promise( function(resolve, reject) {
+    setTimeout(() => {
+        resolve(product)
+      }, 2000)
+  } )
+
+}
