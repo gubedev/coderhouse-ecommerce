@@ -2,8 +2,8 @@
 
 Proyecto Final del Curso ReactJs Codehouse.El mismo fue creado con [Create React App](https://github.com/facebook/create-react-app).
 
-![screenshot](https://github.com/gubedev/coderhouse-ecommerce/docs/home.png)
-![screenshot](https://github.com/gubedev/coderhouse-ecommerce/docs/product-detail.png)
+![screenshot](https://github.com/gubedev/coderhouse-ecommerce/blob/master/docs/home.png)
+![screenshot](https://github.com/gubedev/coderhouse-ecommerce/blob/master/docs/product-detail.png)
 
 ## Funcionalidades
 
