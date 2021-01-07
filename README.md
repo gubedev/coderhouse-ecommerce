@@ -5,17 +5,23 @@ Proyecto Final del Curso ReactJs Codehouse.El mismo fue creado con [Create React
 ![screenshot](https://github.com/gubedev/coderhouse-ecommerce/blob/master/docs/home.png)
 ![screenshot](https://github.com/gubedev/coderhouse-ecommerce/blob/master/docs/product-detail.png)
 
-## Funcionalidades
+## Features
 
-Visualizar Landing page con productos.
-Visualizar Listado de productos de una categoria.
-Visualizar detalle de producto.
+-Visualizar Landing page con productos.
+-Visualizar Listado de productos de una categoria.
+-Visualizar detalle de producto.
 
 
-### Deployment
+### Install Dependencies (frontend & backend)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+npm install
+cd frontend
+npm install
+```
 
-### `yarn build` fails to minify
+### Run
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+# Run frontend (:3000) & backend (:5000)
+npm run dev
