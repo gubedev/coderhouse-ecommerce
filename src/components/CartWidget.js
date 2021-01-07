@@ -3,8 +3,9 @@ import React from "react"
 const CartWidget = () => {
   return (
     <>
-      <svg className="fill-current hover:text-black" 
+      <svg 
         xmlns="http://www.w3.org/2000/svg" 
+        fill="white"
         width="24" 
         height="24" 
         viewBox="0 0 24 24">

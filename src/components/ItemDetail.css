@@ -1,0 +1,7 @@
+.item-detail {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    margin: 1em;
+    padding: 1em;
+}

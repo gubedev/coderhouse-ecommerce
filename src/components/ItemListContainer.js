@@ -1,39 +1,28 @@
-import React, { 
-  useEffect, 
-  useState 
-} from "react"
-import { fetchProducts } from "../services/api.mock"
-import ItemCount from "./ItemCount"
+import React, { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
+import { fetchProducts } from "../services/async-mocks"
 import ItemList from "./ItemList"
+import Loader from "./Loader"
 
-const ItemListContainer = ({ greeting }) => {
-  
+const ItemListContainer = () => {
+  const [isLoading, setIsLoading] = useState(true)
   const [products, setProducts] = useState()
+  const { categoryId } = useParams()
 
-  useEffect( () => {
-    fetchProducts().then(result => {
+  useEffect(() => {
+    setIsLoading(true)
+    fetchProducts(categoryId).then(result => {
       setProducts(result)
+      setIsLoading(false)
     })
-  }, [])
+  }, [categoryId])
+
+  return <div className="container item-list">
+    {isLoading ? 
+    <Loader />
+    : products ? <ItemList items={products} /> : null}
+  </div>
   
-  
-  return (
-    <div className="container pt-1">
-      <h1>{greeting}</h1>
-
-      {products ?  (
-       <ItemList items={products} />
-      ) : <div>Cargando...</div> }
-
-      <ItemCount 
-          product="Camisa Tiger" 
-          stock="5" 
-          initial={1} 
-          onAdd={(q) => console.log(q)}>
-      </ItemCount>
-
-    </div>
-  )
 }
 
 export default ItemListContainer

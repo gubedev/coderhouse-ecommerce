@@ -1,10 +1,14 @@
+main {
+  min-height: 100vh;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
 }
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width: 1200px) {
   .container {
     width: 1140px;
   }
@@ -15,10 +19,47 @@
   justify-content: space-between;
 }
 
+.rounded {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05);
+  border-radius: .25em;
+}
+
 .pl-1 {
   padding-left: 1em;
 }
 
 .pt-1 {
   padding-top: 1em;
+}
+
+.pb-1 {
+  padding-bottom: 1em;
+}
+
+.text-white{
+  color: #fff;
+}
+
+
+.text-gray {
+  color: #333333;
+}
+
+.text-weight-400 {
+  font-weight: 400;
+}
+
+.text-red {
+  color: #D1030f;
+}
+
+.price {
+  font-family: muli-semibold,sans-serif;
+}
+
+.btn {
+  background-color: #ff3c3c;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
 }

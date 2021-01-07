@@ -1,10 +1,29 @@
 .item-count {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    width: 200px;
 }
 
 .item-count__quantity {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 62px;
+    border: 1px solid #cacaca;
 }
+
+.item-count__quantity__increment {
+    border-left: 1px solid #cacaca;
+    text-align: center;
+    cursor: pointer;
+    width: 20px;
+}
+
+.item-count__quantity__decrement {
+    border-right: 1px solid #cacaca;
+    text-align: center;
+    cursor: pointer;
+    width: 20px;
+}
+
+

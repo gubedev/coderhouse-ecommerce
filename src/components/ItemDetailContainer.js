@@ -1,30 +1,31 @@
 import React, { useEffect, useState } from "react"
-import { fetchProduct } from "../services/api.mock"
+import { useParams } from "react-router-dom"
+import { fetchProduct } from "../services/async-mocks"
 import ItemDetail from "./ItemDetail"
+import Loader from "./Loader"
 
 const ItemDetailContainer = () => {
+  const [isLoading, setIsLoading] = useState(true)
   const [product, setProduct] = useState()
+  const { id } = useParams()
 
   useEffect(() => {
-    getItems()
-  }, [])
+    getItems(id)
+  }, [id])
 
-  const getItems = () => {
-    fetchProduct().then(result => {
+  const getItems = id => {
+    setIsLoading(true)
+    fetchProduct(id).then(result => {
       setProduct(result)
+      setIsLoading(false)
     })
   }
 
-  return (
-    <>
-      <div className="container pt-1">
-          {product ? 
-            <ItemDetail item={product} /> 
-            : <div>Cargando...</div>
-          }
-        </div>
-    </>
-  )
+  return <div className="container">
+    {isLoading ? 
+     <Loader /> 
+    : product ? <ItemDetail item={product} /> : null}
+    </div>
 }
 
 export default ItemDetailContainer
