@@ -7,21 +7,7 @@ Proyecto Final del Curso ReactJs Codehouse.El mismo fue creado con [Create React
 
 ## Features
 
--Visualizar Landing page con productos.
--Visualizar Listado de productos de una categoria.
--Visualizar detalle de producto.
+- Visualizar Landing page con productos.
+- Visualizar Listado de productos de una categoria.
+- Visualizar detalle de producto.
 
-
-### Install Dependencies (frontend & backend)
-
-```
-npm install
-cd frontend
-npm install
-```
-
-### Run
-
-```
-# Run frontend (:3000) & backend (:5000)
-npm run dev
