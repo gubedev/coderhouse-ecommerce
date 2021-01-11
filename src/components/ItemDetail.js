@@ -1,8 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import "./ItemDetail.css"
 import ItemCount from "./ItemCount"
+import { NavLink } from "react-router-dom"
 
 const ItemDetail = ({ item }) => {
+  const [count, setCount] = useState()
+
   return (
     <div className="item-detail rounded">
       <div className="item-detail__picture">
@@ -18,11 +21,15 @@ const ItemDetail = ({ item }) => {
         <div className="item-detail__description pl-1 pb-1">
           <p>{item.description}</p>
         </div>
-        <ItemCount 
-          stock={10} 
-          initial={1} 
-          onAdd={() => console.log("")}
-        />
+        {!count ? (
+          <ItemCount stock={10} initial={1} onAdd={setCount} />
+        ) : (
+          <>
+            <NavLink to="/cart" className="ml-1 btn-success">
+              Terminar compra
+            </NavLink>
+          </>
+        )}
       </div>
     </div>
   )

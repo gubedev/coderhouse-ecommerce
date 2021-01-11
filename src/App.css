@@ -36,6 +36,10 @@ main {
   padding-bottom: 1em;
 }
 
+.ml-1 {
+  margin-left: 1em;
+}
+
 .text-white{
   color: #fff;
 }
@@ -59,6 +63,13 @@ main {
 
 .btn {
   background-color: #ff3c3c;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.btn-success {
+  background-color: #74b436;
   color: #fff;
   padding: 10px;
   cursor: pointer;

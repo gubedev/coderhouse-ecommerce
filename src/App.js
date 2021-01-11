@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom"
 import NavBar from "./components/NavBar"
 import ItemListContainer from "./components/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer"
+import Cart from "./components/Cart"
 import Footer from "./components/Footer"
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
             </Route>
             <Route path="/item/:id">
               <ItemDetailContainer />
+            </Route>
+            <Route path="/cart">
+              <Cart />
             </Route>
           </Switch>
         </main>
