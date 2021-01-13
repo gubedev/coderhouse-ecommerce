@@ -1,10 +1,17 @@
 import React, { useState } from "react"
 import "./ItemDetail.css"
 import ItemCount from "./ItemCount"
-import { NavLink } from "react-router-dom"
+import { useHistory } from "react-router"
 
-const ItemDetail = ({ item }) => {
+
+const ItemDetail = ({ item, addItem }) => {
   const [count, setCount] = useState()
+  let history = useHistory()
+
+  const handleSaleEnd = () => {
+    addItem(item, count)
+    history.push("/cart")
+  }
 
   return (
     <div className="item-detail rounded">
@@ -22,12 +29,19 @@ const ItemDetail = ({ item }) => {
           <p>{item.description}</p>
         </div>
         {!count ? (
-          <ItemCount stock={10} initial={1} onAdd={setCount} />
+          <ItemCount 
+            stock={10} 
+            initial={1} 
+            onAdd={setCount} 
+          />
         ) : (
           <>
-            <NavLink to="/cart" className="ml-1 btn-success">
+            <button 
+              className="ml-1 btn-success" 
+              onClick={handleSaleEnd}
+            >
               Terminar compra
-            </NavLink>
+            </button>
           </>
         )}
       </div>

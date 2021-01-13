@@ -1,5 +1,12 @@
-import React, { useEffect, useState } from "react"
+import React, { 
+  useContext,
+  useEffect, 
+  useState 
+} from "react"
 import { useParams } from "react-router-dom"
+import { 
+  CartContext
+} from "../context"
 import { fetchProduct } from "../services/async-mocks"
 import ItemDetail from "./ItemDetail"
 import Loader from "./Loader"
@@ -8,6 +15,8 @@ const ItemDetailContainer = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [product, setProduct] = useState()
   const { id } = useParams()
+
+  const { addItem } = useContext(CartContext)
 
   useEffect(() => {
     getItems(id)
@@ -21,11 +30,14 @@ const ItemDetailContainer = () => {
     })
   }
 
-  return <div className="container">
-    {isLoading ? 
-     <Loader /> 
-    : product ? <ItemDetail item={product} /> : null}
-    </div>
+  return <div 
+            className="container">
+              {isLoading ? <Loader /> : product ? 
+              <ItemDetail 
+                item={product} 
+                addItem={addItem}
+              /> : null}
+          </div>
 }
 
 export default ItemDetailContainer

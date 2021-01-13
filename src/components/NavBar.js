@@ -4,6 +4,7 @@ import CartWidget from "./CartWidget"
 import Brand from "./Brand"
 import NavLinks from "./NavLinks"
 
+import { NavLink } from "react-router-dom"
 
 const NavBar = () => {
   return (
@@ -35,7 +36,9 @@ const NavBar = () => {
           <Brand />
           <NavLinks />
           <div className="flex">
-            <CartWidget />
+            <NavLink to="/cart">
+              <CartWidget />
+            </NavLink>
             <div className="pl-1">
               <strong>Bienvenido!</strong> usuario
             </div>
