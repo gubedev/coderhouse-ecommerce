@@ -36,9 +36,11 @@ const NavBar = () => {
           <Brand />
           <NavLinks />
           <div className="flex">
-            <NavLink to="/cart">
-              <CartWidget />
-            </NavLink>
+            <div className="text-right">
+              <NavLink to="/cart">
+                <CartWidget />
+              </NavLink>
+            </div>
             <div className="pl-1">
               <strong>Bienvenido!</strong> usuario
             </div>
