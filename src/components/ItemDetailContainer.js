@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom"
 import { 
   CartContext
 } from "../context"
-import { fetchProduct } from "../services/async-mocks"
+import { fetchProduct } from "../services"
 import ItemDetail from "./ItemDetail"
 import Loader from "./Loader"
 
@@ -24,10 +24,11 @@ const ItemDetailContainer = () => {
 
   const getItems = id => {
     setIsLoading(true)
-    fetchProduct(id).then(result => {
-      setProduct(result)
-      setIsLoading(false)
-    })
+    fetchProduct(id)
+      .then(result => {
+        setProduct(result)
+        setIsLoading(false)
+      })
   }
 
   return <div 
