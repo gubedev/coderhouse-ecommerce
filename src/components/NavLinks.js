@@ -14,7 +14,7 @@ const NavLinks = () => {
           className="pl-1 text-right" 
           onClick={() => setIsShowingSignup(true)}
         >
-          <NavLink to="/signup">Crear cuenta</NavLink>
+          <span>Crear cuenta</span>
         </div>
       )}
       {!userlogged && (

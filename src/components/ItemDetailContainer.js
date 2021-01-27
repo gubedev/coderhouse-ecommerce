@@ -48,8 +48,6 @@ const ItemDetailContainer = () => {
                     addItem={addItem}
                 /> 
               }
-
-            
           </div>
 }
 

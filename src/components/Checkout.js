@@ -86,14 +86,14 @@ const Checkout = () => {
         <div className="checkout container rounded mb-1">
           <div className="shopping-cart">
             <div className="flex pl-1 pr-1 pt-1 pb-1 w-full shopping-cart__header">
-              <div>Carrito de compras</div>
-              <div>Items {items.length}</div>
+              <div className="text-gray text-weight-600">Carrito de compras</div>
+              <div className="text-gray text-weight-600">Items {items.length}</div>
             </div>
             <div className="flex pl-1 pt-1 pr-1 pb-1 w-full">
-              <div className="w-2/5">DETALLE</div>
-              <div className="text-right w-1/5">CANTIDAD</div>
-              <div className="text-right w-1/5">PRECIO</div>
-              <div className="text-right w-1/5">TOTAL</div>
+              <div className="w-2/5">Detalle</div>
+              <div className="text-right w-1/5">Cantidad</div>
+              <div className="text-right w-1/5">Precio</div>
+              <div className="text-right w-1/5">Total</div>
             </div>
             <div>
               <ul>
@@ -109,7 +109,11 @@ const Checkout = () => {
                             <div className="w-3/5 pl-2 flex flex-col">
                               <div>{cartItem.item.title}</div>
                               <div className="pt-2">
-                                <span style={{ cursor: "pointer" }} onClick={() => handleItemDelete(cartItem.item.id)}>
+                                <span 
+                                  style={{ cursor: "pointer" }} 
+                                  onClick={() => handleItemDelete(cartItem.item.id)}
+                                  className="text-red"
+                                >
                                   Eliminar
                                 </span>
                               </div>
@@ -117,8 +121,8 @@ const Checkout = () => {
                           </div>
                         </div>
                         <div className="text-right w-1/5">{cartItem.quantity}</div>
-                        <div className="text-right w-1/5">$ {cartItem.item.price}</div>
-                        <div className="text-right w-1/5">$ {cartItem.quantity * cartItem.item.price}</div>
+                        <div className="text-right w-1/5">$ { cartItem.item.price }</div>
+                        <div className="text-right w-1/5">$ { (cartItem.quantity * cartItem.item.price).toFixed(2) }</div>
                       </div>
                     </li>
                   )
@@ -127,10 +131,14 @@ const Checkout = () => {
             </div>
           </div>
           <div className="order-summary">
-            <div className="order-summary__header pl-1 pt-1 pb-1">summary</div>
+            <div className="order-summary__header pl-1 pt-1 pb-1 text-gray text-weight-600">Resúmen</div>
             <div className="flex pl-1 pt-1 pr-1 pb-1">
-              <div>Items {items.length}</div>
-              <div>Total $ {total}</div>
+              <div 
+                className="text-gray text-weight-600"
+              >Items {items.length}</div>
+              <div 
+                className="text-gray text-weight-600"
+              >Total $ {total.toFixed(2)}</div>
             </div>
             {userlogged && (
               <>

@@ -1,13 +1,37 @@
-# Proyecto Final ReactJs - Entrega intermedia
+# Proyecto Final ReactJs
 
-Proyecto Final del Curso ReactJs Codehouse.El mismo fue creado con [Create React App](https://github.com/facebook/create-react-app).
+ Como proyecto final se desarrollo una app de un e-commerce para poder vender productos de un rubro a elección. El rubro seleccionado fue productos de tecnología.
 
-![screenshot](https://github.com/gubedev/coderhouse-ecommerce/blob/master/docs/home.png)
-![screenshot](https://github.com/gubedev/coderhouse-ecommerce/blob/master/docs/product-detail.png)
+![screenshot](https://github.com/gubedev/coderhouse-ecommerce/blob/master/docs/Proyecto E-Commerce CODERHOUSE.gif)
+![screenshot](https://github.com/gubedev/coderhouse-ecommerce/blob/master/docs/landing.png)
+![screenshot](https://github.com/gubedev/coderhouse-ecommerce/blob/master/docs/item-detail.png)
 
-## Features
 
-- Visualizar Landing page con productos.
-- Visualizar Listado de productos de una categoria.
-- Visualizar detalle de producto.
+## Comenzando 🚀
+
+La aplicación consiste de un frontend en ReactJs soportado por Firebase como backend.
+
+Para la creación del proyecto ReactJs se utilizo create-react-app (CLI oficial de React, desarrollado por Facebook). 
+
+### Env Variables 📋
+
+Configure los valores de firebase corerspondientes de su cuenta.
+
+```
+REACT_APP_APIKEY =
+REACT_APP_AUTHDOMAIN = 
+REACT_APP_PROJECTID = 
+REACT_APP_STORAGEBUCKET = 
+REACT_APP_MESSAGINGSENDERID = 
+REACT_APP_APPID = 
+```
+
+## Autor ✒️
+
+
+* **Gustavo M. Benitez** - *Coding* - [gubedev](https://github.com/gubedev)
+
+## License 📄
+
+This project is under the MIT license - see [LICENSE.md](LICENSE.md) for details
 

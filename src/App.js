@@ -55,6 +55,7 @@ function App() {
               <Footer />
               <Loader />
               <Signin />
+              <Signup />
             </BrowserRouter>
           </CartContextProvider>
         </LayoutContextProvider>

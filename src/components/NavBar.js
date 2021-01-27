@@ -12,7 +12,7 @@ const NavBar = () => {
           <div>
             <span>Teléfono: +54 333 444 5555</span>
             &nbsp;
-            <span className="pl-1">email: info@coderhousecommerce.com</span>
+            <span className="pl-1">email: info@tiendacoder.com</span>
           </div>
         </div>
       </div>
@@ -36,7 +36,6 @@ const NavBar = () => {
                 type="text" 
                 style={{width: "100%", padding: ".5em"}} 
                 placeholder="buscar entre miles de productos"
-                className="input_amz"  
             />
           </div>
           <NavLinks />

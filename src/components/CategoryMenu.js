@@ -16,7 +16,7 @@ const CategoryMenu = () => {
 
   return (
     <div className="dropdown" ref={ref}>
-      <span onClick={() => setIsActive(!isActive)}>Categorias</span>
+      <span onClick={() => setIsActive(!isActive)}>Categorías</span>
       {isActive && (
         <div className="dropdown-wrapper">
           <div 
@@ -25,7 +25,7 @@ const CategoryMenu = () => {
           >
             <div>
               <div>
-                <span className="text-weight-600">Celulares y telefonos</span>
+                <span className="text-weight-600">Celulares y teléfonos</span>
               </div>
               <div>
                 <ul>
