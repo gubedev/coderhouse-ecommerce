@@ -2,7 +2,7 @@
 
  Como proyecto final se desarrollo una app de un e-commerce para poder vender productos de un rubro a elección. El rubro seleccionado fue productos de tecnología.
 
-![screenshot](https://github.com/gubedev/coderhouse-ecommerce/blob/master/docs/Proyecto E-Commerce CODERHOUSE.gif)
+![screenshot](https://github.com/gubedev/coderhouse-ecommerce/blob/master/docs/shopping.gif)
 ![screenshot](https://github.com/gubedev/coderhouse-ecommerce/blob/master/docs/landing.png)
 ![screenshot](https://github.com/gubedev/coderhouse-ecommerce/blob/master/docs/item-detail.png)
 
