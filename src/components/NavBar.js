@@ -1,10 +1,8 @@
 import React from "react"
 import "./NavBar.css"
-import CartWidget from "./CartWidget"
 import Brand from "./Brand"
 import NavLinks from "./NavLinks"
-
-import { NavLink } from "react-router-dom"
+import CategoryMenu from "./CategoryMenu"
 
 const NavBar = () => {
   return (
@@ -20,9 +18,8 @@ const NavBar = () => {
       </div>
 
       <div className="header-mobile">
-        <div className="container">
+        <div className="container pl-1">
           <Brand />
-          <CartWidget />
         </div>
         <div className="container">
           <div className="pt-1">
@@ -32,19 +29,24 @@ const NavBar = () => {
       </div>
 
       <div className="header">
-        <div className="container">
+        <div className="container pt-1">
           <Brand />
-          <NavLinks />
-          <div className="flex">
-            <div className="text-right">
-              <NavLink to="/cart">
-                <CartWidget />
-              </NavLink>
-            </div>
-            <div className="pl-1">
-              <strong>Bienvenido!</strong> usuario
-            </div>
+          <div style={{width: "40%"}}>
+              <input 
+                type="text" 
+                style={{width: "100%", padding: ".5em"}} 
+                placeholder="buscar entre miles de productos"
+                className="input_amz"  
+            />
           </div>
+          <NavLinks />
+        </div>
+        <div className="container pt-1">
+          <div>
+            <CategoryMenu />
+          </div>
+          <div></div>
+         
         </div>
       </div>
     </>

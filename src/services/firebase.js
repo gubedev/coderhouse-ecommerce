@@ -1,13 +1,14 @@
 import firebase from "firebase/app"
 import "@firebase/firestore"
+import "@firebase/auth"
 
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyCO-Fpy80lPlEVN86-hCEhtUN1kZBRvmdE",
-  authDomain: "coderhouse-ecommerce-347c9.firebaseapp.com",
-  projectId: "coderhouse-ecommerce-347c9",
-  storageBucket: "coderhouse-ecommerce-347c9.appspot.com",
-  messagingSenderId: "426601765856",
-  appId: "1:426601765856:web:87680a0a3d7b6999222985",
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID,
 })
 
 export function getFirebase() {
@@ -15,5 +16,9 @@ export function getFirebase() {
 }
 
 export function getFirestore() {
-    return firebase.firestore(app)
-  }
+  return firebase.firestore(app)
+}
+
+export function getAuth() {
+  return firebase.auth(app)
+}

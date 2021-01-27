@@ -1,30 +1,34 @@
-import React, { useEffect, useState } from "react"
+import React, { 
+  useEffect, 
+  useState,
+  useContext
+} from "react"
 import { useParams } from "react-router-dom"
 import { fetchProducts } from "../services"
 import ItemList from "./ItemList"
-import Loader from "./Loader"
+import { LayoutContext } from "../context"
+
 
 const ItemListContainer = () => {
-  const [isLoading, setIsLoading] = useState(true)
   const [products, setProducts] = useState()
   const { categoryId } = useParams()
 
+  const { setIsShowingLoader } = useContext(LayoutContext)
+
   useEffect(() => {
-    setIsLoading(true)
+    setIsShowingLoader(true)
     fetchProducts(categoryId)
     .then(result => {
-      console.log(result)
       setProducts(result)
-      setIsLoading(false)
+      setIsShowingLoader(false)
     })
   }, [categoryId])
 
   return <div 
             className="container item-list">
-              {isLoading ? <Loader /> : products 
-              ? <ItemList 
+              {products && <ItemList 
                   items={products} 
-                /> : null}
+                />}
           </div>
 }
 

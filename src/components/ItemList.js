@@ -4,16 +4,19 @@ import "./ItemList.css"
 
 const ItemList = ({ items }) => {
   return (
-    <div className="item-list">
-       {items.map(product => {
+    <div className="w-full">
+      <div className="item-list">
+        {items.map(product => {
           return <Item 
-            key={product.id} 
-            id={product.id} 
-            title={product.title} 
-            pictureUrl={product.pictureUrl}
-            price={product.price}
-          />
+              key={product.id} 
+              id={product.id} 
+              title={product.title} 
+              pictureUrl={product.pictureUrl} 
+              price={product.price} 
+              size={"4"}
+            />
         })}
+      </div>
     </div>
   )
 }

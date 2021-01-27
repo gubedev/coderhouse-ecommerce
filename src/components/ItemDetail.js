@@ -10,7 +10,7 @@ const ItemDetail = ({ item, addItem }) => {
 
   const handleSaleEnd = () => {
     addItem(item, count)
-    history.push("/cart")
+    history.push("/checkout")
   }
 
   return (

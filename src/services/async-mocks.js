@@ -58,7 +58,7 @@ const products = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti esse dolorum velit, repellendus magnam, dicta in amet atque ab eos numquam neque maiores, asperiores natus nihil molestiae quaerat excepturi eius.",
     warranty: "Garantía de fábrica: 30 días",
     price: 2200,
-    pictureUrl: "https://http2.mlstatic.com/D_617506-MLA43746164726_102020-O.jpg",
+    pictureUrl: "https://http2.mlstatic.com/D_NQ_NP_2X_852751-MLA43878190921_102020-F.webp",
   },
   {
     category: "2",
@@ -69,7 +69,7 @@ const products = [
     warranty: "Garantía de fábrica: 30 días",
     price: 7725,
     pictureUrl: "https://http2.mlstatic.com/D_761041-MLA41995986461_052020-O.jpg",
-  },
+  }
 ]
 
 export const fetchProducts = async categoryId => {
@@ -90,4 +90,16 @@ export const fetchProduct = async itemId => {
       resolve(filtered)
     }, 2000)
   })
+}
+
+export const doSignup = async payload => {
+  
+}
+
+export const doSignin = async payload => {
+  
+}
+
+export const saveOrder = async payload => {
+  
 }

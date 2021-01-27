@@ -17,7 +17,9 @@ export function CartContextProvider({ children }) {
     setItems(updatedItems)
   }
 
-  const clear = () => {}
+  const clear = () => {
+    setItems([])
+  }
 
   const isInCart = id => {
     const filtered = items.find(i => i.item.id === id)

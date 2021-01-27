@@ -6,7 +6,7 @@ const Brand = () => {
   return (
     <h1>
       <NavLink to="/" exact>
-        <span className="brand">CODERHOUSE SHOP</span>
+        <span className="brand">tiendacoder</span>
       </NavLink>
     </h1>
   )

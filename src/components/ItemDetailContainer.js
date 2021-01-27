@@ -9,35 +9,47 @@ import {
 } from "../context"
 import { fetchProduct } from "../services"
 import ItemDetail from "./ItemDetail"
-import Loader from "./Loader"
+import { LayoutContext } from "../context"
+import Notfound from "./Notfound"
 
 const ItemDetailContainer = () => {
-  const [isLoading, setIsLoading] = useState(true)
   const [product, setProduct] = useState()
+  const [notfound, setNotfound] = useState(false)
   const { id } = useParams()
 
   const { addItem } = useContext(CartContext)
+  const { setIsShowingLoader } = useContext(LayoutContext)
 
   useEffect(() => {
     getItems(id)
   }, [id])
 
   const getItems = id => {
-    setIsLoading(true)
+    setIsShowingLoader(true)
     fetchProduct(id)
       .then(result => {
-        setProduct(result)
-        setIsLoading(false)
+        if (result.title === undefined) {
+          setNotfound(true)
+        }
+        else {
+          setProduct(result)
+          setNotfound(false)
+        }
+        setIsShowingLoader(false)
       })
   }
 
   return <div 
             className="container">
-              {isLoading ? <Loader /> : product ? 
-              <ItemDetail 
-                item={product} 
-                addItem={addItem}
-              /> : null}
+              {notfound ? (<Notfound />) : 
+                product &&
+                  <ItemDetail 
+                    item={product} 
+                    addItem={addItem}
+                /> 
+              }
+
+            
           </div>
 }
 

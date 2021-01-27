@@ -1,0 +1,42 @@
+.checkout {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+.shopping-cart {
+  background-color: white;
+}
+
+.shopping-cart__header {
+  border-bottom: 1px solid whitesmoke;
+}
+
+.logged-as {
+  background-color: #FCF157;
+}
+
+.order-summary {
+  width: 100%;
+  background-color: white;
+  border-left: 1px solid whitesmoke;
+}
+
+.order-summary__header {
+  border-bottom: 1px solid whitesmoke;
+}
+
+@media screen and (min-width: 920px) {
+  .checkout {
+    padding: 0;
+    flex-direction: row;
+  }
+
+  .shopping-cart {
+    width: 70%;
+  }
+
+  .order-summary {
+    width: 30%;
+  }
+}
